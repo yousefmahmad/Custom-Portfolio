@@ -2,7 +2,7 @@ const path = require('path')
 
 exports.createPages = ({graphql, actions}) => {
   const { createPage } = actions
-  const Portfolio = path.resolve('src/pages/portfolio.js')
+  const Portfolio = path.resolve('src/components/portfolio.js')
 
   return gaphql(`
   query loadPagesQuery ($limit: Int!) {
@@ -25,6 +25,7 @@ exports.createPages = ({graphql, actions}) => {
 
 result.data.allMarkdownRemark.eduges.forEach(edge => {
   createPage({
-    path: $
+    path: `${edge.node.frontmatter.slug}`,
+    component: Portfolio,
   })
 })
