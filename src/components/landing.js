@@ -1,6 +1,5 @@
 import React, { Component } from "react"
 import styled from 'styled-components'
-import "./landing.css"
 import {Link} from 'gatsby'
 import bgImg from '../images/bg.jpg'
 
@@ -42,7 +41,7 @@ font-weight: 300;
 display: flex;
 flex-direction: row;
 list-style:none;
-&:hover{color:#8f0000}
+&:hover{color:#8f0000};
 `
 
 
@@ -51,7 +50,7 @@ class Landing extends Component {
     return (
       <LandingContainer>
           <Name>
-            <Link to='./page-2' style={{textDecoration: 'none'}}>YOUSEF</Link>
+            <Link to='./portfolio' style={{textDecoration: 'none'}} >YOUSEF</Link>
           </Name>
           <Description>
             <CleanListItem>AHMAD</CleanListItem>
