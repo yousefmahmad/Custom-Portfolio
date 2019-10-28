@@ -33,6 +33,7 @@ display: flex;
 flex-direction: row;
 margin: 0;
 margin-top: 3%
+margin-bottom: 0;
 `
 const LastName = styled.h1`
 color:#a6a6a6;
@@ -43,8 +44,8 @@ font-family: 'Josefin Sans', sans-serif;
 font-weight: 300;
 display: flex;
 flex-direction: row;
-margin: 0;
 margin-top: 3%;
+margin-bottom: 0;
 `
 const List = styled.ul`
   color: white;
@@ -55,7 +56,8 @@ const List = styled.ul`
   flex-direction: column;
   align-items: flex-end;
   margin-left: 60%;
-  /* margin-bottom: 100%; */
+  margin-top: 0;
+  margin-bottom: 0;
   `
 const CleanListItem = styled.li`
   list-style: none;
@@ -66,7 +68,10 @@ const MediaIcons = styled.ul`
   font-weight: 100;
   display:flex;
   align-items: flex-end;
+  margin-top:0;
   margin-left: 50%;
+  margin-bottom: 25%;
+  align-items: baseline;
 `
 
 const CleanIconItem = styled.li`
@@ -88,12 +93,14 @@ class Portfolio extends Component {
             <CleanListItem>Projects</CleanListItem>
           </List>
           <MediaIcons>
-            <CleanIconItem><a href="mailto:ymabreek@gmail.com"><FaEnvelope /></a></CleanIconItem>
-            <CleanIconItem><a href="mailto:ymabreek@gmail.com"><FaGithub /></a></CleanIconItem>
-            <CleanIconItem><a href="mailto:ymabreek@gmail.com"><FaLinkedin /></a></CleanIconItem>
-            <CleanIconItem><a href="mailto:ymabreek@gmail.com"><FaMedium /></a></CleanIconItem>
+            <CleanIconItem><a href="mailto:ymabreek@gmail.com" style={{textDecoration:'none', color: 'rgba(163, 163, 163, .5)'}}><FaEnvelope /></a></CleanIconItem>
+            <CleanIconItem><a href="https://github.com/yousefmahmad" style={{textDecoration:'none', color: 'rgba(163, 163, 163, .5)'}}><FaGithub /></a></CleanIconItem>
+            <CleanIconItem><a href="www.linkedin.com/in/yousef-m-ahmad" style={{textDecoration:'none', color: 'rgba(163, 163, 163, .5)'}}><FaLinkedin /></a></CleanIconItem>
+            <CleanIconItem><a href="https://medium.com/@ymabreek" style={{textDecoration:'none', color: 'rgba(163, 163, 163, .5)'}}><FaMedium /></a></CleanIconItem>
           </MediaIcons>
         </Aside>
+        <h1>SOFTWARE ENGINEER</h1>
+        <p></p>
       </>
     )
   }
