@@ -4,7 +4,7 @@ import { Link } from 'gatsby'
 import bgImg from '../images/bg.jpg'
 import hShot from '../images/Headshot.png'
 import { FaEnvelope, FaLinkedin, FaMedium, FaGithub, FaLink } from "react-icons/fa";
-import {LoremIpsum} from 'react-lorem-ipsum'
+import { LoremIpsum } from 'react-lorem-ipsum'
 
 
 
@@ -84,31 +84,69 @@ const CleanIconItem = styled.li`
 `
 const ContentContainer = styled.div`
 width: 50vw;
+display:flex;
+flex-direction:column;
 margin-right: 0;
 margin-left: 50%;
 `
-const SoftHeader = styled.h1`
+const SoftTitle = styled.h1`
 display:flex;
-justify-content:center;
+margin-left: 15px;
+font-family: 'Josefin Sans', sans-serif;
+font-weight: 300;
+font-size: 48px;
 `
 const SoftDescrip = styled.p`
 display: flex;
 justify-content: left;
 margin-left: 10px;
+margin-right: 0;
 padding-left: 10px;
 width: 30vw;
+font-family: 'Josefin Sans', sans-serif;
+font-weight: 100;
 `
 const ImgContainer = styled.div`
-/* float: right; */
-width: 20%;
-height: 30%;
-background-image: url(${hShot});
+display:flex;
+justify-content: flex-end;
+align-items:center;
+margin-left: 30px;
+`
+const HeadContainer = styled.div`
+display:flex;
+flex-direction: column;
+justify-content: center;
+`
+const DescripContainer = styled.div`
+display:flex;
+`
+
+const ProjectsContainer = styled.div`
+display: flex;
+`
+
+const ProjTitle = styled.h1`
+display:flex;
+margin-left: 15px;
+font-family: 'Josefin Sans', sans-serif;
+font-weight: 300;
+font-size: 48px;
+border-bottom: 2px solid #8f0000;
+padding-right: 60vh;
+`
+const IndivProjTitle = styled.div`
+display:flex;
+margin-left: 15px;
+font-family: 'Josefin Sans', sans-serif;
+font-weight: 300;
+font-size: 48px;
 `
 
 class Portfolio extends Component {
   render() {
     return (
       <>
+      {/* Aside container */}
         <Aside>
           <Name> Yousef</Name> <LastName>Ahmad</LastName>
           <List>
@@ -119,16 +157,32 @@ class Portfolio extends Component {
             <CleanListItem>Projects</CleanListItem>
           </List>
           <MediaIcons>
-            <CleanIconItem><a href="mailto:ymabreek@gmail.com" style={{textDecoration:'none', color: 'rgba(163, 163, 163, .5)'}}><FaEnvelope /></a></CleanIconItem>
-            <CleanIconItem><a href="https://github.com/yousefmahmad" style={{textDecoration:'none', color: 'rgba(163, 163, 163, .5)'}}><FaGithub /></a></CleanIconItem>
-            <CleanIconItem><a href="www.linkedin.com/in/yousef-m-ahmad" style={{textDecoration:'none', color: 'rgba(163, 163, 163, .5)'}}><FaLinkedin /></a></CleanIconItem>
-            <CleanIconItem><a href="https://medium.com/@ymabreek" style={{textDecoration:'none', color: 'rgba(163, 163, 163, .5)'}}><FaMedium /></a></CleanIconItem>
+            <CleanIconItem><a href="mailto:ymabreek@gmail.com" style={{ textDecoration: 'none', color: 'rgba(163, 163, 163, .5)' }}><FaEnvelope /></a></CleanIconItem>
+            <CleanIconItem><a href="https://github.com/yousefmahmad" style={{ textDecoration: 'none', color: 'rgba(163, 163, 163, .5)' }}><FaGithub /></a></CleanIconItem>
+            <CleanIconItem><a href="www.linkedin.com/in/yousef-m-ahmad" style={{ textDecoration: 'none', color: 'rgba(163, 163, 163, .5)' }}><FaLinkedin /></a></CleanIconItem>
+            <CleanIconItem><a href="https://medium.com/@ymabreek" style={{ textDecoration: 'none', color: 'rgba(163, 163, 163, .5)' }}><FaMedium /></a></CleanIconItem>
           </MediaIcons>
         </Aside>
         <ContentContainer>
-          <SoftHeader>Software Engineer</SoftHeader>
-          <SoftDescrip><LoremIpsum p={1} /></SoftDescrip>
-          <ImgContainer />
+
+          {/* Software Engineering Description */}
+          <HeadContainer>
+            <SoftTitle>Software Engineer</SoftTitle>
+            <DescripContainer>
+              <SoftDescrip><LoremIpsum p={1} /></SoftDescrip>
+              <ImgContainer>
+                <img src={hShot} alt='Yousef Ahmad' style={{ height: '200px' }} />
+              </ImgContainer>
+            </DescripContainer>
+          </HeadContainer>
+
+
+          {/* Projects */}
+          <ProjectsContainer>
+            <ProjTitle>
+              Projects
+            </ProjTitle>
+          </ProjectsContainer>
         </ContentContainer>
       </>
     )
