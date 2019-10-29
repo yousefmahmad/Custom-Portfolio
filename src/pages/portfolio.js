@@ -2,7 +2,9 @@ import React, { Component } from "react"
 import styled from 'styled-components'
 import { Link } from 'gatsby'
 import bgImg from '../images/bg.jpg'
+import hShot from '../images/Headshot.png'
 import { FaEnvelope, FaLinkedin, FaMedium, FaGithub, FaLink } from "react-icons/fa";
+import {LoremIpsum} from 'react-lorem-ipsum'
 
 
 
@@ -20,6 +22,8 @@ const Aside = styled.div`
   width: 50vw;
   justify-content:center;
   position:fixed;
+  top: 0;
+  left:1;
 `
 const Name = styled.h1`
 color:white;
@@ -32,7 +36,7 @@ font-weight: 300;
 display: flex;
 flex-direction: row;
 margin: 0;
-margin-top: 3%
+margin-top: 3%;
 margin-bottom: 0;
 `
 const LastName = styled.h1`
@@ -78,6 +82,28 @@ const CleanIconItem = styled.li`
   list-style: none;
   padding: 0 5px;
 `
+const ContentContainer = styled.div`
+width: 50vw;
+margin-right: 0;
+margin-left: 50%;
+`
+const SoftHeader = styled.h1`
+display:flex;
+justify-content:center;
+`
+const SoftDescrip = styled.p`
+display: flex;
+justify-content: left;
+margin-left: 10px;
+padding-left: 10px;
+width: 30vw;
+`
+const ImgContainer = styled.div`
+/* float: right; */
+width: 20%;
+height: 30%;
+background-image: url(${hShot});
+`
 
 class Portfolio extends Component {
   render() {
@@ -99,8 +125,11 @@ class Portfolio extends Component {
             <CleanIconItem><a href="https://medium.com/@ymabreek" style={{textDecoration:'none', color: 'rgba(163, 163, 163, .5)'}}><FaMedium /></a></CleanIconItem>
           </MediaIcons>
         </Aside>
-        <h1>SOFTWARE ENGINEER</h1>
-        <p></p>
+        <ContentContainer>
+          <SoftHeader>Software Engineer</SoftHeader>
+          <SoftDescrip><LoremIpsum p={1} /></SoftDescrip>
+          <ImgContainer />
+        </ContentContainer>
       </>
     )
   }
