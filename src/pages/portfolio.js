@@ -4,10 +4,10 @@ import { Link } from 'gatsby'
 import bgImg from '../images/bg.jpg'
 import hShot from '../images/Headshot.png'
 import TowerImg from '../images/TowerOfHanoi.png'
-import { FaEnvelope, FaLinkedin, FaMedium, FaGithub, FaLink } from "react-icons/fa";
+import { FaLinkedin, FaFacebook, FaGithub, FaInstagram, FaTwitter } from "react-icons/fa";
 import { LoremIpsum } from 'react-lorem-ipsum'
 
-
+const baseURL = 'https://yousefahmad.dev/'
 
 const Aside = styled.div`
   display: flex;
@@ -169,17 +169,30 @@ class Portfolio extends Component {
         <Aside>
           <Name> Yousef</Name> <LastName>Ahmad</LastName>
           <List>
-            <CleanListItem>Blog</CleanListItem>
-            <CleanListItem>About</CleanListItem>
-            <CleanListItem>Resume</CleanListItem>
-            <CleanListItem>Contact</CleanListItem>
-            <CleanListItem>Projects</CleanListItem>
+            <CleanListItem>
+              <a href={'https://medium.com/@ymabreek'} target="_blank" style={{ textDecoration: 'none', color: 'white' }}  >Blog</a>
+            </CleanListItem>
+            <CleanListItem>
+              <Link to='./about' style={{ textDecoration: 'none', color: 'white' }}>
+                About
+              </Link>
+            </CleanListItem>
+            <CleanListItem>
+              <Link to='./resume' style={{ textDecoration: 'none', color: 'white' }}>
+                Resume
+              </Link>
+            </CleanListItem>
+            <CleanListItem>
+              <Link to='./contact' style={{ textDecoration: 'none', color: 'white' }}>
+                Contact
+              </Link>
+            </CleanListItem>
           </List>
           <MediaIcons>
-            <CleanIconItem><a href="mailto:ymabreek@gmail.com" style={{ textDecoration: 'none', color: 'rgba(163, 163, 163, .5)' }}><FaEnvelope /></a></CleanIconItem>
+            <CleanIconItem><a href={"http://twitter.com/intent/tweet/?url=" + baseURL} style={{ textDecoration: 'none', color: 'rgba(163, 163, 163, .5)' }}><FaTwitter /></a></CleanIconItem>
             <CleanIconItem><a href="https://github.com/yousefmahmad" style={{ textDecoration: 'none', color: 'rgba(163, 163, 163, .5)' }}><FaGithub /></a></CleanIconItem>
-            <CleanIconItem><a href="www.linkedin.com/in/yousef-m-ahmad" style={{ textDecoration: 'none', color: 'rgba(163, 163, 163, .5)' }}><FaLinkedin /></a></CleanIconItem>
-            <CleanIconItem><a href="https://medium.com/@ymabreek" style={{ textDecoration: 'none', color: 'rgba(163, 163, 163, .5)' }}><FaMedium /></a></CleanIconItem>
+            <CleanIconItem><a href={"https://www.linkedin.com/shareArticle?mini=true&url=<?php the_permalink(); ?>&title=Some%20Title&summary=Some%20Summary&source=" + baseURL} style={{ textDecoration: 'none', color: 'rgba(163, 163, 163, .5)' }}><FaLinkedin /></a></CleanIconItem>
+            <CleanIconItem><a href={"https://wwww.facebook.com/sharer/sharer.php?u=" + baseURL} style={{ textDecoration: 'none', color: 'rgba(163, 163, 163, .5)' }}><FaFacebook /></a></CleanIconItem>
           </MediaIcons>
         </Aside>
         <ContentContainer>
@@ -202,9 +215,13 @@ class Portfolio extends Component {
               Projects
             </ProjTitle>
             <IndivProjContainer>
-                <img src={TowerImg} alt='Tower of Hanoi'  style = {{width: '400px' , border: '1px solid black'}}/>
+              <a href={'https://pages.git.generalassemb.ly/yousefmahmad/towerofhanoi.github.io/'} style={{ textDecoration: 'none', color: 'black' }}>
+                <img src={TowerImg} alt='Tower of Hanoi' style={{ width: '400px', border: '1px solid black' }} />
+              </a>
               <IndivProjTitle>
-                <a href={'https://pages.git.generalassemb.ly/yousefmahmad/towerofhanoi.github.io/'} style={{textDecoration:'none', color: 'black'}}>Tower of Hanoi</a>
+                <a href={'https://pages.git.generalassemb.ly/yousefmahmad/towerofhanoi.github.io/'} style={{ textDecoration: 'none', color: 'black' }}>
+                  Tower of Hanoi
+                </a>
               </IndivProjTitle>
               <IndivProjDescrip>
                 <LoremIpsum p={1} />
