@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { Link } from 'gatsby'
 import bgImg from '../images/bg.jpg'
 import hShot from '../images/Headshot.png'
+import TowerImg from '../images/TowerOfHanoi.png'
 import { FaEnvelope, FaLinkedin, FaMedium, FaGithub, FaLink } from "react-icons/fa";
 import { LoremIpsum } from 'react-lorem-ipsum'
 
@@ -123,30 +124,48 @@ display:flex;
 
 const ProjectsContainer = styled.div`
 display: flex;
+flex-direction: column;
 `
 
 const ProjTitle = styled.h1`
 display:flex;
 margin-left: 15px;
+margin-right: 15%;
 font-family: 'Josefin Sans', sans-serif;
 font-weight: 300;
 font-size: 48px;
 border-bottom: 2px solid #8f0000;
 padding-right: 60vh;
+padding-bottom: 15px;
 `
-const IndivProjTitle = styled.div`
+const IndivProjContainer = styled.div`
+display: flex;
+flex-direction: column;
+align-items: center;
+`
+
+const IndivProjTitle = styled.h2`
 display:flex;
 margin-left: 15px;
 font-family: 'Josefin Sans', sans-serif;
 font-weight: 300;
-font-size: 48px;
+/* hover not working */
+&:hover{color:#8f0000};
+`
+const IndivProjDescrip = styled.p`
+display: flex;
+justify-content: center;
+margin: 0 auto;
+width: 40vw;
+font-family: 'Josefin Sans', sans-serif;
+font-weight: 100;
 `
 
 class Portfolio extends Component {
   render() {
     return (
       <>
-      {/* Aside container */}
+        {/* Aside container */}
         <Aside>
           <Name> Yousef</Name> <LastName>Ahmad</LastName>
           <List>
@@ -182,6 +201,15 @@ class Portfolio extends Component {
             <ProjTitle>
               Projects
             </ProjTitle>
+            <IndivProjContainer>
+                <img src={TowerImg} alt='Tower of Hanoi'  style = {{width: '400px' , border: '1px solid black'}}/>
+              <IndivProjTitle>
+                <a href={'https://pages.git.generalassemb.ly/yousefmahmad/towerofhanoi.github.io/'} style={{textDecoration:'none', color: 'black'}}>Tower of Hanoi</a>
+              </IndivProjTitle>
+              <IndivProjDescrip>
+                <LoremIpsum p={1} />
+              </IndivProjDescrip>
+            </IndivProjContainer>
           </ProjectsContainer>
         </ContentContainer>
       </>

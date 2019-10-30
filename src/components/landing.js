@@ -41,6 +41,7 @@ font-weight: 300;
 display: flex;
 flex-direction: row;
 list-style:none;
+/* Hover Not working */
 &:hover{color:#8f0000};
 `
 
@@ -50,7 +51,7 @@ class Landing extends Component {
     return (
       <LandingContainer>
           <Name>
-            <Link to='./portfolio' style={{textDecoration: 'none'}} >YOUSEF</Link>
+            <Link to='./portfolio' style={{textDecoration: 'none', color: 'white'}} >YOUSEF</Link>
           </Name>
           <Description>
             <CleanListItem>AHMAD</CleanListItem>
