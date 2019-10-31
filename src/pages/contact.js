@@ -2,12 +2,13 @@ import React, { Component } from "react"
 import styled from 'styled-components'
 import { Link } from 'gatsby'
 import bgImg from '../images/bg.jpg'
-import hShot from '../images/Headshot.png'
-import TowerImg from '../images/TowerOfHanoi.png'
-import { FaLinkedin, FaFacebook, FaGithub, FaInstagram, FaTwitter } from "react-icons/fa";
-import { LoremIpsum } from 'react-lorem-ipsum'
+import { FaLinkedin, FaFacebook, FaGithub, FaTwitter } from "react-icons/fa";
+import Modal from 'react-modal'
+
 
 const baseURL = 'https://yousefahmad.dev/'
+
+Modal.setAppElement('div');
 
 const Aside = styled.div`
   display: flex;
@@ -90,78 +91,23 @@ flex-direction:column;
 margin-right: 0;
 margin-left: 50%;
 `
-const SoftTitle = styled.h1`
-display:flex;
-margin-left: 15px;
-font-family: 'Josefin Sans', sans-serif;
-font-weight: 300;
-font-size: 48px;
-`
-const SoftDescrip = styled.p`
-display: flex;
-justify-content: left;
-margin-left: 10px;
-margin-right: 0;
-padding-left: 10px;
-width: 30vw;
-font-family: 'Josefin Sans', sans-serif;
-font-weight: 100;
-`
-const ImgContainer = styled.div`
-display:flex;
-justify-content: flex-end;
-align-items:center;
-margin-left: 30px;
-`
-const HeadContainer = styled.div`
-display:flex;
-flex-direction: column;
-justify-content: center;
-`
-const DescripContainer = styled.div`
-display:flex;
-`
 
-const ProjectsContainer = styled.div`
-display: flex;
-flex-direction: column;
-`
+class Contact extends Component {
+  state = {
+    name: '',
+    nameError: '',
+    email: '',
+    emailError: '',
+    subject: '',
+    subjectError: '',
+    message: '',
+    messageError: '',
 
-const ProjTitle = styled.h1`
-display:flex;
-margin-left: 15px;
-margin-right: 15%;
-font-family: 'Josefin Sans', sans-serif;
-font-weight: 300;
-font-size: 48px;
-border-bottom: 2px solid #8f0000;
-padding-right: 60vh;
-padding-bottom: 15px;
-`
-const IndivProjContainer = styled.div`
-display: flex;
-flex-direction: column;
-align-items: center;
-`
+    resData: '',
 
-const IndivProjTitle = styled.h2`
-display:flex;
-margin-left: 15px;
-font-family: 'Josefin Sans', sans-serif;
-font-weight: 300;
-/* hover not working */
-&:hover{color:#8f0000};
-`
-const IndivProjDescrip = styled.p`
-display: flex;
-justify-content: center;
-margin: 0 auto;
-width: 40vw;
-font-family: 'Josefin Sans', sans-serif;
-font-weight: 100;
-`
+    modalIsOpen: false
+  }
 
-class Portfolio extends Component {
   render() {
     return (
       <>
@@ -200,40 +146,14 @@ class Portfolio extends Component {
             <CleanIconItem><a href={"https://wwww.facebook.com/sharer/sharer.php?u=" + baseURL} style={{ textDecoration: 'none', color: 'rgba(163, 163, 163, .5)' }}><FaFacebook /></a></CleanIconItem>
           </MediaIcons>
         </Aside>
-       
+
+        {/* Contact Form 
+        Need to deploy to netlify before i can see the contact form*/}
         <ContentContainer>
-          {/* Software Engineering Description */}
-
-          <HeadContainer>
-            <SoftTitle>Software Engineer</SoftTitle>
-            <DescripContainer>
-              <SoftDescrip><LoremIpsum p={1} /></SoftDescrip>
-              <ImgContainer>
-                <img src={hShot} alt='Yousef Ahmad' style={{ height: '200px' }} />
-              </ImgContainer>
-            </DescripContainer>
-          </HeadContainer>
-
-
-          {/* Projects */}
-          <ProjectsContainer>
-            <ProjTitle>
-              Projects
-            </ProjTitle>
-            <IndivProjContainer>
-              <a href={'https://pages.git.generalassemb.ly/yousefmahmad/towerofhanoi.github.io/'} style={{ textDecoration: 'none', color: 'black' }}>
-                <img src={TowerImg} alt='Tower of Hanoi' style={{ width: '400px', border: '1px solid black' }} />
-              </a>
-              <IndivProjTitle>
-                <a href={'https://pages.git.generalassemb.ly/yousefmahmad/towerofhanoi.github.io/'} style={{ textDecoration: 'none', color: 'black' }}>
-                  Tower of Hanoi
-                </a>
-              </IndivProjTitle>
-              <IndivProjDescrip>
-                <LoremIpsum p={1} />
-              </IndivProjDescrip>
-            </IndivProjContainer>
-          </ProjectsContainer>
+          <form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
+            {/* You still need to add the hidden input with the form name to your JSX form */}
+            <input type="hidden" name="form-name" value="contact" />
+          </form>
         </ContentContainer>
       </>
     )
@@ -241,4 +161,4 @@ class Portfolio extends Component {
 }
 
 
-export default Portfolio
+export default Contact
