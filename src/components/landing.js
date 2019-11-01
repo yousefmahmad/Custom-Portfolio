@@ -1,8 +1,11 @@
 import React, { Component } from "react"
 import styled from 'styled-components'
-import {Link} from 'gatsby'
+import { Link } from 'gatsby'
 import bgImg from '../images/bg.jpg'
 
+const Body = styled.body`
+margin: 0;
+`
 
 const Description = styled.ul`
   color: #a6a6a6;
@@ -24,6 +27,7 @@ const LandingContainer = styled.main`
   height: 100vh;
   align-content: center;
   justify-content:center;
+  margin:0;
 `
 
 const CleanListItem = styled.li`
@@ -49,9 +53,9 @@ list-style:none;
 class Landing extends Component {
   render() {
     return (
-      <LandingContainer>
+        <LandingContainer>
           <Name>
-            <Link to='./portfolio' style={{textDecoration: 'none', color: 'white'}} >YOUSEF</Link>
+            <Link to='./portfolio' style={{ textDecoration: 'none', color: 'white' }} >YOUSEF</Link>
           </Name>
           <Description>
             <CleanListItem>AHMAD</CleanListItem>
@@ -59,9 +63,8 @@ class Landing extends Component {
             <CleanListItem>ENGINEERING</CleanListItem>
             <CleanListItem>SOFTWARE</CleanListItem>
             <CleanListItem>STRATEGY</CleanListItem>
-        </Description>
-      </LandingContainer>
-
+          </Description>
+        </LandingContainer>
     )
   }
 }

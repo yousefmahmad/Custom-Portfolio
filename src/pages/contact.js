@@ -3,12 +3,12 @@ import styled from 'styled-components'
 import { Link } from 'gatsby'
 import bgImg from '../images/bg.jpg'
 import { FaLinkedin, FaFacebook, FaGithub, FaTwitter } from "react-icons/fa";
-import Modal from 'react-modal'
+
 
 
 const baseURL = 'https://yousefahmad.dev/'
 
-Modal.setAppElement('div');
+
 
 const Aside = styled.div`
   display: flex;
@@ -93,21 +93,6 @@ margin-left: 50%;
 `
 
 class Contact extends Component {
-  state = {
-    name: '',
-    nameError: '',
-    email: '',
-    emailError: '',
-    subject: '',
-    subjectError: '',
-    message: '',
-    messageError: '',
-
-    resData: '',
-
-    modalIsOpen: false
-  }
-
   render() {
     return (
       <>

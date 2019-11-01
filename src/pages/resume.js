@@ -2,9 +2,8 @@ import React, { Component } from "react"
 import styled from 'styled-components'
 import { Link } from 'gatsby'
 import bgImg from '../images/bg.jpg'
-import { FaLinkedin, FaFacebook, FaGithub, FaInstagram, FaTwitter } from "react-icons/fa";
+import { FaLinkedin, FaFacebook, FaGithub, FaTwitter } from "react-icons/fa";
 import Skillz from '../images/Skizllz.jpg'
-import { LoremIpsum } from 'react-lorem-ipsum'
 
 const baseURL = 'https://yousefahmad.dev/'
 
