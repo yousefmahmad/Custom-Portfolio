@@ -141,7 +141,7 @@ class Resume extends Component {
         <Aside>
           <Name> Yousef</Name> <LastName>Ahmad</LastName>
           <List>
-          <CleanListItem>
+            <CleanListItem>
               <Link to='./portfolio' style={{ textDecoration: 'none', color: 'white' }}>
                 Home
               </Link>
@@ -180,7 +180,7 @@ class Resume extends Component {
           <SecTitle>
             Technical Skills
           </SecTitle>
-            <img src={Skillz} alt={'Skills'} style={{width: '100%'}} />
+          <img src={Skillz} alt={'Skills'} style={{ width: '100%' }} />
           <SecTitle>
             Work History
          </SecTitle>
@@ -192,24 +192,24 @@ class Resume extends Component {
           <br />
             August 2019 - Present
         </Comp>
-        <WorkDescrip>
-          Completed full-time immersive program that taught me full stack development of web applications. I have
-          completed many projects, both collaboratively and alone, using a wide breadth of tools. Some of the
-          projects include:
+          <WorkDescrip>
+            Completed full-time immersive program that taught me full stack development of web applications. I have
+            completed many projects, both collaboratively and alone, using a wide breadth of tools. Some of the
+            projects include:
           <br /> <br />
-          Tower of Hanoi : A centuries old game remade here using JavaScript, HTML and CSS
+            Tower of Hanoi : A centuries old game remade here using JavaScript, HTML and CSS
           <br /> <br />
-          Crypto : An API built from scratch to give the user all the different cryptocurrencies and related
-          information. Built using MongoDB, Express.js, Node.js and deployed with Mongo Atlas and Heroku.
+            Crypto : An API built from scratch to give the user all the different cryptocurrencies and related
+            information. Built using MongoDB, Express.js, Node.js and deployed with Mongo Atlas and Heroku.
           <br /> <br />
-          Fiji: A responsive, beautiful front end design created collaboratively using HTML, CSS and Javascript.
+            Fiji: A responsive, beautiful front end design created collaboratively using HTML, CSS and Javascript.
           <br /> <br />
-          TV-Browser: An API built to allow for browsing of different tv channels and their description. Built using
-          MongoDB, Express.js, Node.js and deployed with Mongo Atlas and Heroku.
+            TV-Browser: An API built to allow for browsing of different tv channels and their description. Built using
+            MongoDB, Express.js, Node.js and deployed with Mongo Atlas and Heroku.
           <br /> <br />
-          Photos from the Great Beyond: Collaboratively built website with a team of 4. Created our own backend
-          using MongoDB, Mongoose, Express.js and Node. js to pull data and images from NASA and post them
-          on our website. We then built our front end using React.js in order to deliver a user friendly experience.
+            Photos from the Great Beyond: Collaboratively built website with a team of 4. Created our own backend
+            using MongoDB, Mongoose, Express.js and Node. js to pull data and images from NASA and post them
+            on our website. We then built our front end using React.js in order to deliver a user friendly experience.
         </WorkDescrip>
           <JobTitle>
             Field Engineer
@@ -219,55 +219,60 @@ class Resume extends Component {
             <br />
             June 2018 - July 2019
         </Comp>
-        <WorkDescrip>
-          <li>
-            Managed a team of 5 for one of our largest in the North Eastern District clients, bringing in
-            $600,000/month on site.
+          <WorkDescrip>
+            <li>
+              Managed a team of 5 for one of our largest in the North Eastern District clients, bringing in
+              $600,000/month on site.
           </li>
-          <li>
-            Provided project management and coordinated with the client to carry out field engineering
-            projects utilizing high-grade jet explosives in order to perforate wells in high pressure, high risk
-            environments and collaboration with other teams on the ground to meet the client’s needs. 
+            <li>
+              Provided project management and coordinated with the client to carry out field engineering
+              projects utilizing high-grade jet explosives in order to perforate wells in high pressure, high risk
+              environments and collaboration with other teams on the ground to meet the client’s needs.
           </li>
-          <li>
-          Operates the principal service tools in an assigned service area. Conducts the operation of a service unit to maintain a high standard of efficiency and quality.
+            <li>
+              Operates the principal service tools in an assigned service area. Conducts the operation of a service unit to maintain a high standard of efficiency and quality.
           </li>
-          <li>
-          Maintains an intimate knowledge of the latest technological changes and operating procedures pertaining to Company equipment, tools, and practices to insure maximum operating efficiency with a minimum of lost time.
+            <li>
+              Maintains an intimate knowledge of the latest technological changes and operating procedures pertaining to Company equipment, tools, and practices to insure maximum operating efficiency with a minimum of lost time.
           </li>
-          <li>
-          Supervises Operator crew in the preparation of the unit and calibration of equipment. Assures adherence to all safety regulations.
+            <li>
+              Supervises Operator crew in the preparation of the unit and calibration of equipment. Assures adherence to all safety regulations.
           </li>
-          <li>
-          Fosters and maintains customer relations by establishing a positive image and confidence in the quality of services and ensures the confidentiality of all logging operations.
+            <li>
+              Fosters and maintains customer relations by establishing a positive image and confidence in the quality of services and ensures the confidentiality of all logging operations.
           </li>
-          <li>
-          Informs customers of any unusual conditions noted at the well, maintains direct contact with customer's representatives throughout the logging or completion operation; interprets common services in the assigned service area for customers.
+            <li>
+              Informs customers of any unusual conditions noted at the well, maintains direct contact with customer's representatives throughout the logging or completion operation; interprets common services in the assigned service area for customers.
           </li>
-        </WorkDescrip>
-        <SecTitle>
-          Education
+          </WorkDescrip>
+          <SecTitle>
+            Education
         </SecTitle>
-        <JobTitle>
-          Software Engineer Immersive
+          <JobTitle>
+            Software Engineer Immersive
         </JobTitle>
-        <Comp>
-          General Assembly
-          <br/>
-          Washington D.C.
-          <br/>
-          Completed: October 2019
+          <Comp>
+            General Assembly
+          <br />
+            Washington D.C.
+          <br />
+            Completed: October 2019
         </Comp>
-        <JobTitle>
-          Petroleum Engineering B.Sc (GPA: 3.63)
+          <JobTitle>
+            Petroleum Engineering B.Sc (GPA: 3.63)
         </JobTitle>
-        <Comp>
-          Univeristy of Louisiana at Lafayette
-          <br/>
-          Lafayette, LA
-          <br/>
-          Completed: May 2018
+          <Comp>
+            Univeristy of Louisiana at Lafayette
+          <br />
+            Lafayette, LA
+          <br />
+            Completed: May 2018
         </Comp>
+          <SecTitle>
+            <a href={'https://docs.google.com/document/d/1SjQHBJgfScQEeyjyFzsPPen8AZepeL0PqXwVrjCvbaY/edit?usp=sharing'} style={{ textDecoration:'none', color: 'Black' }}>
+              Click Here For a Downloadable Version of My Resume
+            </a>
+          </SecTitle>
         </ContentContainer>
       </>
     )
