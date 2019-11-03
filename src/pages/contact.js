@@ -91,6 +91,19 @@ flex-direction:column;
 margin-right: 0;
 margin-left: 50%;
 `
+const FormContainer = styled.form`
+display: flex;
+flex-direction:column;
+font-size: 24px;
+align-items:center;
+font-family:'Josefin Sans', sans-serif;
+font-weight: 100;
+margin-top: 20%;
+`
+const InputStyle = styled.input`
+width: 250px;
+border: 2px solid #8f0000;
+`
 
 class Contact extends Component {
   render() {
@@ -135,45 +148,46 @@ class Contact extends Component {
         {/* Contact Form 
         Need to deploy to netlify before i can see the contact form*/}
         <ContentContainer>
-          <form name="contact" method="post" action="/thanks/" data-netlify="true" data-netlify-honeypot="bot-field">
-            <input type="hidden" name="form-name" value="contact" />
-            <p hidden>
-              <label>
-                Don't fill this out:
-                <input name="bot-field" />
-              </label>
-            </p>
-            <p>
-              <label>
-                Your name:
+            <FormContainer name="contact" method="post" action="/thanks/" data-netlify="true" data-netlify-honeypot="bot-field">
+              <input type="hidden" name="form-name" value="contact" />
+              <p hidden>
+                <label>
+                  Don't fill this out:
+                    <InputStyle name="bot-field" />
+                </label>
+              </p>
+              <p>
+                <label>
+                  Your name:
                 <br />
-                <input type="text" name="name" />
-              </label>
-            </p>
-            <p>
-              <label>
-                Your email:
-                <br/>
-                <input type="email" name="email" />
-              </label>
-            </p>
-            <p>
-              <label>
-                Message:
+                    <InputStyle type="text" name="name" />
+                </label>
+              </p>
+              <p>
+                <label>
+                  Your email:
                 <br />
-                <textarea name="message"></textarea>
-              </label>
-            </p>
-            <p>
-              <button type="submit">Send</button>
-            </p>
-          </form>
+                    <InputStyle type="email" name="email" />
+
+                </label>
+              </p>
+              <p>
+                <label>
+                  Message:
+                <br />
+                  <textarea name="message" style={{width: '400px', height: '200px', border: '2px solid #8f0000'}}></textarea>
+                </label>
+              </p>
+              <p>
+                <button type="submit" style={{width: '250px', height: '50px', fontSize: '24px', backgroundColor: '#8f0000', color: 'white'}}>Send</button>
+              </p>
+          </FormContainer>
         </ContentContainer>
       </>
 
-                    )
-                  }
-                }
-                
-                
+    )
+  }
+}
+
+
 export default Contact
