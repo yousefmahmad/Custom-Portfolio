@@ -141,6 +141,11 @@ class Resume extends Component {
         <Aside>
           <Name> Yousef</Name> <LastName>Ahmad</LastName>
           <List>
+          <CleanListItem>
+              <Link to='./portfolio' style={{ textDecoration: 'none', color: 'white' }}>
+                Home
+              </Link>
+            </CleanListItem>
             <CleanListItem>
               <a href={'https://medium.com/@ymabreek'} target="_blank" style={{ textDecoration: 'none', color: 'white' }}  >Blog</a>
             </CleanListItem>
@@ -157,11 +162,6 @@ class Resume extends Component {
             <CleanListItem>
               <Link to='./contact' style={{ textDecoration: 'none', color: 'white' }}>
                 Contact
-              </Link>
-            </CleanListItem>
-            <CleanListItem>
-              <Link to='./portfolio' style={{ textDecoration: 'none', color: 'white' }}>
-                Portfolio
               </Link>
             </CleanListItem>
           </List>

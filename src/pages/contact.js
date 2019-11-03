@@ -111,8 +111,13 @@ class Contact extends Component {
       <>
         {/* Aside container */}
         <Aside>
-          <Name> Yousef</Name> <LastName>Ahmad</LastName>
+          <Name>Yousef</Name> <LastName>Ahmad</LastName>
           <List>
+          <CleanListItem>
+              <Link to='./portfolio' style={{ textDecoration: 'none', color: 'white' }}>
+                Home
+              </Link>
+            </CleanListItem>
             <CleanListItem>
               <a href={'https://medium.com/@ymabreek'} target="_blank" style={{ textDecoration: 'none', color: 'white' }}  >Blog</a>
             </CleanListItem>
@@ -131,11 +136,6 @@ class Contact extends Component {
                 Contact
               </Link>
             </CleanListItem>
-            <CleanListItem>
-              <Link to='./portfolio' style={{ textDecoration: 'none', color: 'white' }}>
-                Portfolio
-              </Link>
-            </CleanListItem>
           </List>
           <MediaIcons>
             <CleanIconItem><a href={"http://twitter.com/intent/tweet/?url=" + baseURL} style={{ textDecoration: 'none', color: 'rgba(163, 163, 163, .5)' }}><FaTwitter /></a></CleanIconItem>
@@ -148,6 +148,7 @@ class Contact extends Component {
         {/* Contact Form 
         Need to deploy to netlify before i can see the contact form*/}
         <ContentContainer>
+          
             <FormContainer name="contact" method="post" action="/thanks/" data-netlify="true" data-netlify-honeypot="bot-field">
               <input type="hidden" name="form-name" value="contact" />
               <p hidden>
