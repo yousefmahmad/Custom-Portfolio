@@ -102,6 +102,7 @@ padding-bottom: 15px;
 
 const SecTitle = styled.h2`
 display:flex;
+flex-direction: row;
 width: 40%;
 margin-left: 15px;
 margin-right: 15%;

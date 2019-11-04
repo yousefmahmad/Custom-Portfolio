@@ -6,8 +6,16 @@ import hShot from '../images/Headshot.png'
 import TowerImg from '../images/TowerOfHanoi.png'
 import { FaLinkedin, FaFacebook, FaGithub, FaInstagram, FaTwitter } from "react-icons/fa";
 import { LoremIpsum } from 'react-lorem-ipsum'
+import MernTrans from '../images/MERN-Translate.png'
+import PHTGB from '../images/PHTGB.png'
 
 const baseURL = 'https://yousefahmad.dev/'
+
+const PageContainer = styled.div`
+@media (max-width: 950px){
+  flex-direction: column;
+}
+`
 
 const Aside = styled.div`
   display: flex;
@@ -25,6 +33,12 @@ const Aside = styled.div`
   position:fixed;
   top: 0;
   left:1;
+
+  @media (max-width: 1000px){
+    width: 100vw;
+    height: 50vh;
+   
+  }
 `
 const Name = styled.h1`
 color:white;
@@ -63,9 +77,20 @@ const List = styled.ul`
   margin-left: 60%;
   margin-top: 0;
   margin-bottom: 0;
+
+  @media(max-width: 1000px){
+    align-content: center;
+    flex-direction: row;
+    margin: 0 auto;
+    margin-bottom:10px;
+  }
   `
 const CleanListItem = styled.li`
   list-style: none;
+
+  @media(max-width: 1000px){
+    padding: 0 10px;
+  }
 `
 const MediaIcons = styled.ul`
   font-size: 40px;
@@ -77,6 +102,10 @@ const MediaIcons = styled.ul`
   margin-left: 50%;
   margin-bottom: 25%;
   align-items: baseline;
+
+  @media(max-width:1000px){
+    margin: 0 auto;
+  }
 `
 
 const CleanIconItem = styled.li`
@@ -89,12 +118,20 @@ display:flex;
 flex-direction:column;
 margin-right: 0;
 margin-left: 50%;
+
+@media(max-width: 1000px){
+  width: fit-content;
+  align-content:center;
+  margin-left:0;
+  height: 50vh;
+  margin-top: 60%;
+}
 `
 const SoftTitle = styled.h1`
 display:flex;
 margin-left: 15px;
 font-family: 'Josefin Sans', sans-serif;
-font-weight: 300;
+font-weight: 400;
 font-size: 48px;
 `
 const SoftDescrip = styled.p`
@@ -106,6 +143,11 @@ padding-left: 10px;
 width: 30vw;
 font-family: 'Josefin Sans', sans-serif;
 font-weight: 100;
+font-size: 24px;
+
+@media (max-width: 1000px){
+  width: 70vw;
+}
 `
 const ImgContainer = styled.div`
 display:flex;
@@ -149,6 +191,7 @@ display:flex;
 margin-left: 15px;
 font-family: 'Josefin Sans', sans-serif;
 font-weight: 300;
+font-size:36px;
 /* hover not working */
 &:hover{color:#8f0000};
 `
@@ -159,6 +202,11 @@ margin: 0 auto;
 width: 40vw;
 font-family: 'Josefin Sans', sans-serif;
 font-weight: 100;
+font-size: 24px;
+
+@media (max-width: 1000px){
+  width: 70vw;
+}
 `
 
 class Portfolio extends Component {
@@ -169,7 +217,7 @@ class Portfolio extends Component {
         <Aside>
           <Name> Yousef</Name> <LastName>Ahmad</LastName>
           <List>
-          <CleanListItem>
+            <CleanListItem>
               <Link to='./portfolio' style={{ textDecoration: 'none', color: 'white' }}>
                 Home
               </Link>
@@ -200,14 +248,14 @@ class Portfolio extends Component {
             <CleanIconItem><a href={"https://wwww.facebook.com/sharer/sharer.php?u=" + baseURL} style={{ textDecoration: 'none', color: 'rgba(163, 163, 163, .5)' }}><FaFacebook /></a></CleanIconItem>
           </MediaIcons>
         </Aside>
-       
+
         <ContentContainer>
           {/* Software Engineering Description */}
 
           <HeadContainer>
             <SoftTitle>Software Engineer</SoftTitle>
             <DescripContainer>
-              <SoftDescrip><LoremIpsum p={1} /></SoftDescrip>
+              <SoftDescrip>Full stack web developer with experience in Petroleum Engineering and management. I have a passion for modern design, mathematical puzzles and an attention to detail, which allows me to build contemporary, clean and unique products. </SoftDescrip>
               <ImgContainer>
                 <img src={hShot} alt='Yousef Ahmad' style={{ height: '200px' }} />
               </ImgContainer>
@@ -227,6 +275,34 @@ class Portfolio extends Component {
               <IndivProjTitle>
                 <a href={'https://pages.git.generalassemb.ly/yousefmahmad/towerofhanoi.github.io/'} style={{ textDecoration: 'none', color: 'black' }}>
                   Tower of Hanoi
+                </a>
+              </IndivProjTitle>
+              <IndivProjDescrip>
+                <LoremIpsum p={1} />
+              </IndivProjDescrip>
+            </IndivProjContainer>
+            <br />
+            <IndivProjContainer>
+              <a href={'https://mern-translate.herokuapp.com/'} style={{ textDecoration: 'none', color: 'black' }}>
+                <img src={MernTrans} alt='MERN-Translate App' style={{ width: '400px', border: '1px solid black' }} />
+              </a>
+              <IndivProjTitle>
+                <a href={'https://mern-translate.herokuapp.com/'} style={{ textDecoration: 'none', color: 'black' }}>
+                  Mern-Translate
+                </a>
+              </IndivProjTitle>
+              <IndivProjDescrip>
+                <LoremIpsum p={1} />
+              </IndivProjDescrip>
+            </IndivProjContainer>
+            <br />
+            <IndivProjContainer>
+              <a href={'https://photos-from-the-great-beyond.netlify.com/'} style={{ textDecoration: 'none', color: 'black' }}>
+                <img src={PHTGB} alt='MERN-Translate App' style={{ width: '400px', border: '1px solid black' }} />
+              </a>
+              <IndivProjTitle>
+                <a href={'https://photos-from-the-great-beyond.netlify.com/'} style={{ textDecoration: 'none', color: 'black' }}>
+                  Photos from the Great Beyond
                 </a>
               </IndivProjTitle>
               <IndivProjDescrip>

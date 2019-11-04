@@ -36,7 +36,7 @@ const CleanListItem = styled.li`
 
 const Name = styled.h1`
 color:white;
-padding:20px 15px;
+padding:30px 15px;
 font-size: 85px;
 border-right: 2px solid #8f0000;
 height: 15%;
