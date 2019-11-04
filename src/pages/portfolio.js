@@ -8,6 +8,8 @@ import { FaLinkedin, FaFacebook, FaGithub, FaInstagram, FaTwitter } from "react-
 import { LoremIpsum } from 'react-lorem-ipsum'
 import MernTrans from '../images/MERN-Translate.png'
 import PHTGB from '../images/PHTGB.png'
+import Fiji from '../images/Fiji-Mockup.png'
+import EnergyBackend from '../images/Energy-Backend.png'
 
 const baseURL = 'https://yousefahmad.dev/'
 
@@ -304,6 +306,25 @@ class Portfolio extends Component {
                 <a href={'https://photos-from-the-great-beyond.netlify.com/'} style={{ textDecoration: 'none', color: 'black' }}>
                   Photos from the Great Beyond
                 </a>
+              </IndivProjTitle>
+              <IndivProjDescrip>
+                <LoremIpsum p={1} />
+              </IndivProjDescrip>
+            </IndivProjContainer>
+            <br/>
+            <IndivProjContainer>
+                <img src={Fiji} alt='Fiji-Mockup' style={{ width: '400px', border: '1px solid black' }} />
+              <IndivProjTitle>
+                  Fiji-Mockup
+              </IndivProjTitle>
+              <IndivProjDescrip>
+                <LoremIpsum p={1} />
+              </IndivProjDescrip>
+            </IndivProjContainer>
+            <IndivProjContainer>
+                <img src={EnergyBackend} alt='Energy-Backend' style={{ width: '400px', border: '1px solid black' }} />
+              <IndivProjTitle>
+                  DOE Futures Forecast
               </IndivProjTitle>
               <IndivProjDescrip>
                 <LoremIpsum p={1} />
