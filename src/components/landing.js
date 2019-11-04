@@ -12,6 +12,10 @@ const Description = styled.ul`
   font-size: 85px;
   font-family: 'Josefin Sans', sans-serif;
   font-weight: 300;
+
+  @media(max-width:1000px){
+    font-size: 50px;
+  }
 `
 
 const LandingContainer = styled.main`
@@ -39,7 +43,7 @@ color:white;
 padding:30px 15px;
 font-size: 85px;
 border-right: 2px solid #8f0000;
-height: 15%;
+height: 8%;
 font-family: 'Josefin Sans', sans-serif;
 font-weight: 300;
 display: flex;
@@ -47,6 +51,13 @@ flex-direction: row;
 list-style:none;
 /* Hover Not working */
 &:hover{color:#8f0000};
+
+@media (max-width: 1000px){
+  font-size: 50px;
+  height: 2%;
+  padding-top: 10px;
+  margin-top: 6%;
+}
 `
 
 

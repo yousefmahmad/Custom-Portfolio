@@ -26,6 +26,12 @@ const Aside = styled.div`
   position:fixed;
   top: 0;
   left:1;
+
+  @media (max-width: 1000px){
+    width: 100vw;
+    height: 50vh;
+   
+  }
 `
 const Name = styled.h1`
 color:white;
@@ -64,9 +70,20 @@ const List = styled.ul`
   margin-left: 60%;
   margin-top: 0;
   margin-bottom: 0;
+
+  @media(max-width: 1000px){
+    align-content: center;
+    flex-direction: row;
+    margin: 0 auto;
+    margin-bottom:10px;
+  }
   `
 const CleanListItem = styled.li`
   list-style: none;
+
+  @media(max-width: 1000px){
+    padding: 0 10px;
+  }
 `
 const MediaIcons = styled.ul`
   font-size: 40px;
@@ -78,6 +95,10 @@ const MediaIcons = styled.ul`
   margin-left: 50%;
   margin-bottom: 25%;
   align-items: baseline;
+
+  @media(max-width:1000px){
+    margin: 0 auto;
+  }
 `
 
 const CleanIconItem = styled.li`
@@ -90,6 +111,14 @@ display:flex;
 flex-direction:column;
 margin-right: 0;
 margin-left: 50%;
+
+@media(max-width: 1000px){
+  width: fit-content;
+  align-content:center;
+  margin: 0 auto;
+  height: 50vh;
+  margin-top: 40%;
+}
 `
 const FormContainer = styled.form`
 display: flex;
@@ -99,6 +128,8 @@ align-items:center;
 font-family:'Josefin Sans', sans-serif;
 font-weight: 100;
 margin-top: 20%;
+
+
 `
 const InputStyle = styled.input`
 width: 250px;

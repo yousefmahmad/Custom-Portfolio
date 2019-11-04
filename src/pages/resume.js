@@ -23,6 +23,12 @@ const Aside = styled.div`
   position:fixed;
   top: 0;
   left:1;
+
+  @media (max-width: 1000px){
+    width: 100vw;
+    height: 50vh;
+   
+  }
 `
 const Name = styled.h1`
 color:white;
@@ -61,9 +67,20 @@ const List = styled.ul`
   margin-left: 60%;
   margin-top: 0;
   margin-bottom: 0;
+
+  @media(max-width: 1000px){
+    align-content: center;
+    flex-direction: row;
+    margin: 0 auto;
+    margin-bottom:10px;
+  }
   `
 const CleanListItem = styled.li`
   list-style: none;
+
+  @media(max-width: 1000px){
+    padding: 0 10px;
+  }
 `
 const MediaIcons = styled.ul`
   font-size: 40px;
@@ -75,6 +92,10 @@ const MediaIcons = styled.ul`
   margin-left: 50%;
   margin-bottom: 25%;
   align-items: baseline;
+
+  @media(max-width:1000px){
+    margin: 0 auto;
+  }
 `
 
 const CleanIconItem = styled.li`
@@ -87,6 +108,14 @@ display:flex;
 flex-direction:column;
 margin-right: 0;
 margin-left: 50%;
+
+@media(max-width: 1000px){
+  width: fit-content;
+  align-content:center;
+  margin-left:0;
+  height: 50vh;
+  margin-top: 60%;
+}
 `
 const ResTitle = styled.h1`
 display:flex;
@@ -110,6 +139,7 @@ font-family: 'Josefin Sans', sans-serif;
 font-weight: 300;
 border-bottom: 2px solid #8f0000;
 padding-bottom: 15px;
+font-size: 36px;
 `
 const JobTitle = styled.h3`
 display:flex;
@@ -117,6 +147,7 @@ font-family: 'Josefin Sans', sans-serif;
 font-weight: 300;
 margin-left: 25px;
 margin-bottom:5px;
+font-size: 24px;
 `
 const Comp = styled.h4`
 display:flex;
@@ -124,6 +155,7 @@ font-family: 'Josefin Sans', sans-serif;
 font-weight: 300;
 margin-left: 25px;
 margin-top:0;
+font-size: 20px;
 `
 const WorkDescrip = styled.p`
 display:flex;
@@ -132,6 +164,7 @@ font-weight: 100;
 margin: 0 25px;
 flex-direction:column;
 margin-bottom: 5%;
+font-size: 18px;
 `
 
 class Resume extends Component {
