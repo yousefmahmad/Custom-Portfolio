@@ -280,7 +280,8 @@ class Portfolio extends Component {
                 </a>
               </IndivProjTitle>
               <IndivProjDescrip>
-                <LoremIpsum p={1} />
+              Tower of Hanoi is a mathematical puzzle game which consists of 3 differnt rods or areas in which to place number of disks of varying sizes. The goal of the game is to move the disks from the rightmost rod or area to the leftmost ro or area. Only one disk may be moved at any point. The disks must be, from top to bottom, in order of size. Furthermore, when moving the disks, no disk may be placed upon a disk that is smaller than itself.
+              You can calculate the minimal number of moves it will take to win the game by using the mathematical expression of 2^n − 1, where n represents the number of disks. For instance, if you were to play with 3 disks, it would take a minimum of 7 moves to win the game. If you were to play with 5 it would take minimum of 31 moves to win the game. By increasing the the number of disks, the minimal number of moves increases exponentially and therefore, the difficulty.
               </IndivProjDescrip>
             </IndivProjContainer>
             <br />
@@ -294,7 +295,7 @@ class Portfolio extends Component {
                 </a>
               </IndivProjTitle>
               <IndivProjDescrip>
-                <LoremIpsum p={1} />
+              This app uses a MongoDB, Express.js and Node.js in order to create a simple api which catalogs various phrase translations. In developing this application I learned how to fetch and seed data into a NoSQL database (MongoDB). I was also able to go through and choose the data to manipulate within the database using schemas and models. Using the Express.js framework for Node.js I learned to use a minimal, unåopinionated framework and how to choose the various dependencies to keep my application lightweight and efficient (DRY). I was also able to implement full CRUD functionality into this app using my routes and controllers, which was challenging at first, however after some practice came easily enough.
               </IndivProjDescrip>
             </IndivProjContainer>
             <br />
@@ -308,7 +309,7 @@ class Portfolio extends Component {
                 </a>
               </IndivProjTitle>
               <IndivProjDescrip>
-                <LoremIpsum p={1} />
+              This project was a collaboration between a team of 4. Users can access some of NASA's "Photo of the Day" entries, as well as photos taken from NASA's Mars Rovers. In addition to this functionality, our app features an Amateur Astronomers gallery where users can upload their own images and view photos that have already been uploaded. We used React.js to create the front-end of this website and Netlify to deploy it. We were able to create this app by splitting up into groups and creating a backend using MongoDB, Express.js and Node.js to fetch data from the free NASA API. Deploying this back-end we used Heroku and Mongo AtlasDB. We then used a second fetch in the front end app to retrieve the data from the back-end API to and created a full CRUD functionality web application to showcase the beautiful images from the last frontier.
               </IndivProjDescrip>
             </IndivProjContainer>
             <br/>
@@ -318,7 +319,7 @@ class Portfolio extends Component {
                   Fiji-Mockup
               </IndivProjTitle>
               <IndivProjDescrip>
-                <LoremIpsum p={1} />
+              This website mockup was a collaboration between a team of three people. We split the mockup into pieces in order to more efficiently build it. We used a combination of HTML and CSS in order to create content and style this mockup. We were given a pdf to work off of to attempt to recreate the advanced styling that we were trying to mimic. This also served to hone our skills in laying out specific elements on a page that we struggled with previously.
               </IndivProjDescrip>
             </IndivProjContainer>
             <IndivProjContainer>
@@ -327,7 +328,7 @@ class Portfolio extends Component {
                   DOE Futures Forecast
               </IndivProjTitle>
               <IndivProjDescrip>
-                <LoremIpsum p={1} />
+              This web API was created using Python, PostgeSQL and REST Django. It was then containerized using Docker. Utilizing the data provided by the Department of Energy’s free API, I was able to fetch data directly from the to compare their forecasts of Petroleum Liquids, Natural Gas and Renewable Energy sources up until 2050. The most difficult process and which took the most amount of time, was learning to use Docker to containerize this application. My next goals are to deploy this site using AWS Elastic Container Service, fetching further data from the API, in real time with fixtures and scripts in Python, to use it to compare forecasted future prices, growth and use within the United States. This data will then be presented in a front end developed using React.js and deployed with Netlify.
               </IndivProjDescrip>
             </IndivProjContainer>
           </ProjectsContainer>
