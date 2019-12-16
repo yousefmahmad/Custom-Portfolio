@@ -4,8 +4,8 @@ import { Link } from 'gatsby'
 import bgImg from '../images/bg.jpg'
 import hShot from '../images/Headshot.png'
 import TowerImg from '../images/TowerOfHanoi.png'
-import { FaLinkedin, FaFacebook, FaGithub, FaInstagram, FaTwitter } from "react-icons/fa";
-import { LoremIpsum } from 'react-lorem-ipsum'
+import lenaImg from '../images/lenaBlog.png'
+import { FaLinkedin, FaFacebook, FaGithub, FaTwitter } from "react-icons/fa";
 import MernTrans from '../images/MERN-Translate.png'
 import PHTGB from '../images/PHTGB.png'
 import Fiji from '../images/Fiji-Mockup.png'
@@ -272,6 +272,22 @@ class Portfolio extends Component {
             <ProjTitle>
               Projects
             </ProjTitle>
+            <IndivProjContainer>
+              <a href={'https://wonderful-cray-36c1a3.netlify.com/'} style={{ textDecoration: 'none', color: 'black' }}>
+                <img src={lenaImg} alt="Lena's Blog" style={{ width: '400px', border: '1px solid black' }} />
+              </a>
+              <IndivProjTitle>
+                <a href={'https://wonderful-cray-36c1a3.netlify.com/'} style={{ textDecoration: 'none', color: 'black' }}>
+                  Lena's CAIR Blog
+                </a>
+              </IndivProjTitle>
+              <IndivProjDescrip>
+              This project was created for the national Litigation Director for the Council on Islamic Relations so that she could share her experiences defending Muslim Civil Rights in the United States. 
+              To create the project I used a combination of Gatsby.js, GraphQL, Prismic.io and Netlify AKA jamstack. After creating a basic style for the website, I learned how to wire up and connect the website with Prismic so that Lena could post and update her blog as she pleased, in a simple easy manner.
+              By using the technologies I did, I was able to create a website that was completley serverless and easy to use.
+              </IndivProjDescrip>
+            </IndivProjContainer>
+            <br />
             <IndivProjContainer>
               <a href={'https://pages.git.generalassemb.ly/yousefmahmad/towerofhanoi.github.io/'} style={{ textDecoration: 'none', color: 'black' }}>
                 <img src={TowerImg} alt='Tower of Hanoi' style={{ width: '400px', border: '1px solid black' }} />
